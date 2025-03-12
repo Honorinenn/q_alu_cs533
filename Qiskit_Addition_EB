@@ -1,0 +1,35 @@
+from qiskit import QuantumCircuit, Aer, execute
+from qiskit.visualization import plot_histogram
+
+# Function to create a 2-qubit adder
+def quantum_adder(a, b):
+    # Create a quantum circuit with 4 qubits: 2 for inputs, 1 for carry, 1 for output
+    qc = QuantumCircuit(4, 2)
+    
+    # Initialize input qubits based on input values
+    if a == 1:
+        qc.x(0)
+    if b == 1:
+        qc.x(1)
+    
+    # Implement addition using quantum gates
+    qc.cx(0, 2)  # Set carry bit if a=1
+    qc.cx(1, 2)  # Flip carry bit if b=1
+    qc.ccx(0, 1, 3)  # Set high bit if both a and b are 1
+    qc.cx(2, 3)  # Add carry to result
+    
+    # Measure the result (2 bits)
+    qc.measure([2, 3], [0, 1])
+    
+    return qc
+
+# Create and simulate a quantum circuit for adding 1+1
+adder_circuit = quantum_adder(1, 1)
+
+# Run the simulation
+simulator = Aer.get_backend('qasm_simulator')
+result = execute(adder_circuit, simulator, shots=1024).result()
+counts = result.get_counts()
+
+# Display results
+print("Addition result:", counts)
