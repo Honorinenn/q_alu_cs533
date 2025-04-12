@@ -23,9 +23,13 @@ Simulates division using Inverse QFT and Toffoli gates as a placeholder for cont
 
 # 3) Qubit Layout
 The circuits typically use 4 qubits:
+
 •	q0, q1: Input qubits
+
 •	q2: Result qubit
+
 •	q3: Auxiliary (if required)
+
 
 # 4) Circuit Visualization
 
