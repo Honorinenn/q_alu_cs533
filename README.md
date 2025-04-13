@@ -2,9 +2,13 @@
 This project demonstrates how to implement basic arithmetic operations such as addition, subtraction, multiplication, XOR, AND, and division using quantum circuits built with Qiskit.
 
 # 1) Requirements
+
 Install the required Python packages using:
+
 %pip install qiskit
+
 %pip install pylatexenc
+
 Note: These commands are designed for Jupyter or IPython environments (e.g., Google Colab, Jupyter Notebooks). Use pip install directly in terminal if running locally.
 
 # 2) Operations Covered
