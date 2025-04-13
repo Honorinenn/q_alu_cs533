@@ -9,7 +9,7 @@ Note: These commands are designed for Jupyter or IPython environments (e.g., Goo
 
 # 2) Operations Covered
 
- Quantum Addition (Ripple-Carry Adder)
+Quantum Addition (Ripple-Carry Adder)
 Uses the Quantum Fourier Transform (QFT) to simulate the addition of two qubits. The result is stored in a third qubit.
 
 Quantum Subtraction
