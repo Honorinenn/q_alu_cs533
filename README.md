@@ -8,17 +8,23 @@ Install the required Python packages using:
 Note: These commands are designed for Jupyter or IPython environments (e.g., Google Colab, Jupyter Notebooks). Use pip install directly in terminal if running locally.
 
 # 2) Operations Covered
-➕ Quantum Addition (Ripple-Carry Adder)
+
+ Quantum Addition (Ripple-Carry Adder)
 Uses the Quantum Fourier Transform (QFT) to simulate the addition of two qubits. The result is stored in a third qubit.
-➖ Quantum Subtraction
+
+Quantum Subtraction
 Negates the second operand and applies QFT addition, simulating subtraction.
-❌ XOR Operation
+
+XOR Operation
 Implements bitwise XOR using a CNOT (CX) gate.
-✅ AND Operation
+
+AND Operation
 Implements logical AND using a Toffoli (CCX) gate, storing the result in a third qubit.
-✖️ Quantum Multiplication
+
+Quantum Multiplication
 Multiplies two qubits using Hadamard gates for superposition, QFT for transformation, and Toffoli gate for controlled multiplication.
-➗ Quantum Division
+
+Quantum Division
 Simulates division using Inverse QFT and Toffoli gates as a placeholder for controlled subtraction-based division logic.
 
 # 3) Qubit Layout
